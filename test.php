@@ -3,6 +3,8 @@
 // $test = file_get_contents("https://www.ae.com/men-aeo-360-extreme-flex-long-sleeve-t-shirt-bold-black/web/s-prod/2171_8522_064");
 $test = file_get_contents("https://www.ae.com/men-t-shirts/web/s-cat/90012");
 
+$link = $test;
+
 $scrape1 = '<img class="item active category-product-image category-product-image-front img-responsive lazyload"';
 $title = strstr($test, $scrape1);
 
@@ -14,7 +16,7 @@ $test = substr($test, 0, strpos($test, $scrape));
 // echo $test;
 
 
-$link = file_get_contents("https://www.ae.com/men-t-shirts/web/s-cat/90012");
+// link is initialized above.
 
 $scrape1 = 'col-md-3 col-sm-6 col-xs-6" itemscope itemtype="http://schema.org/Product">';
 $link = strstr($link, $scrape1);
